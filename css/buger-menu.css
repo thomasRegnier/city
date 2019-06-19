@@ -1,0 +1,264 @@
+.lanceur{
+    display: none;
+}
+
+
+
+.fadeIn{
+    animation: 1s fadeIn ease-in-out forwards;
+}
+
+.fadeOut{
+    animation: 1s fadeOut ease-in-out forwards;
+}
+
+
+.opening{
+    animation: 0.8s opening ease-in-out forwards;
+}
+
+.closing{
+    animation: 0.8s closing ease-in-out forwards;
+}
+
+
+@keyframes closing {
+
+    from{
+        transform: translateX(0vw);
+        opacity: 1;
+
+
+    }
+    to{
+        transform: translateX(-70vw);
+        opacity: 0;
+
+
+    }
+}
+@keyframes opening {
+    from{
+        transform: translateX(-70vw);
+        opacity: 0;
+
+
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+
+
+    }
+
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes fadeOut {
+    from{
+        opacity: 1;
+    }
+
+    to{
+        opacity: 0;
+    }
+
+}
+
+
+.menu{
+    background-color: rgba(0, 0, 0, 0.452);
+    width: 70vw;
+    height: 100vh;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-70vw);
+    opacity: 1;
+    z-index: 99;
+
+}
+
+.menu div{
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 140%;
+}
+
+
+.menuDiv{
+    transform: translateX(-70vw);
+
+}
+
+
+.linkMoove{
+    animation: ease-in-out mooveIn 0.5s forwards;
+}
+
+
+
+
+
+
+
+@keyframes mooveIn {
+    from{
+        transform: translateX(-70vw);
+        opacity: 0;
+
+    }
+    to{
+        transform: translateX(0vw);
+        opacity: 1;
+
+    }
+}
+
+
+.lanceur{
+    position: fixed;
+    font-size: 130%;
+}
+
+
+
+.lanceur i{
+    cursor: pointer;
+}
+
+
+.show{
+    display: block;
+
+}
+
+.masq{
+    display: none;
+}
+.shadow{
+    z-index: 98;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+
+
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-top: -10px;
+}
+.hamRotate.active {
+    transform: rotate(45deg);
+    background-color: transparent !important;
+
+}
+.hamRotate180.active {
+    transform: rotate(180deg);
+}
+
+.line {
+    fill:none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke:#000;
+    stroke-width:5.5;
+    stroke-linecap:round;
+}
+
+.ham4 .top {
+    stroke-dasharray: 40 121;
+}
+.ham4 .bottom {
+    stroke-dasharray: 40 121;
+}
+.ham4.active .top {
+    stroke-dashoffset: -68px;
+}
+.ham4.active .bottom {
+    stroke-dashoffset: -68px;
+}
+
+.newMenu{
+    width: 60vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -60vw;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.452);
+    transition: ease-in-out 0.5s;
+    opacity: 0;
+
+}
+
+.mooveMenu{
+    left: 0;
+    opacity: 1;
+}
+
+.newShadow{
+    z-index: 98;
+    display: none;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition:  0.3s;
+    opacity: 0;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.mooveShadow{
+    opacity: 1;
+    display: block;
+
+}.mooveMenu div{
+     height: 20%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+.mooveMenu a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 140%;
+}
+.mooveMenu a:hover{
+    color: white;
+    text-decoration: underline;
+}
