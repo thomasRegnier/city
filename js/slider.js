@@ -56,7 +56,6 @@ prev.addEventListener('click', function () {
 let dotSpan = document.querySelectorAll('.dot')
 
 dotSpan.forEach(function(item, index) {
-    console.log(item, index);
     item.addEventListener('click', function () {
         currentSlide(index+1)
     })
@@ -70,15 +69,11 @@ let seeIndex = document.querySelectorAll('.seeEventIndex')
 
 seeIndex.forEach(function (see) {
     see.addEventListener('click', function () {
-        console.log(this)
-        console.log(this.getAttribute('eventId'))
 
         let idForEvent = this.getAttribute('eventId')
 
-        console.log(typeof idForEvent)
         parseInt(idForEvent)
         idForEvent = parseInt(idForEvent)
-        console.log(typeof idForEvent)
 
         let dataForEvent = new FormData()
 

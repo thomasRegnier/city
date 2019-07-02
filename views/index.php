@@ -65,7 +65,7 @@
 </div>
 
 
-<h1 class="indexPages" style="text-decoration: underline #3B5998;">Nous suivre aussi sur Facbook :</h1>
+<h1 class="indexPages" style="text-decoration: underline #3B5998;">Nous suivre aussi sur Facebook :</h1>
 
 <div class="forFb" style="text-align:center; margin-bottom: 50px">
 <div class="fb-page" data-href="https://www.facebook.com/villesaintleulaforet95320" data-tabs="timeline" data-width="500" data-height="750" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/villesaintleulaforet95320" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/villesaintleulaforet95320">Ville de Saint-Leu-la Forêt</a></blockquote></div>

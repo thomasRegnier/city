@@ -312,8 +312,6 @@ const eventDisplay = function (title, image, description, id) {
     forSeeEvents.classList.add('forSeeEvents')
     insideEvents.classList.add('insideEvents')
 
-
-
     seeEvents.addEventListener('click', function () {
         console.log(this)
         console.log(this.getAttribute('eventId'))
@@ -362,8 +360,6 @@ const sendDate = function (param) {
             if (data.type === 0) {
                 console.log(data.message)
                 document.querySelector('.calendar2-msg').innerHTML=data.message;
-
-
             }
             else{
                 for (let i = 0; i<data.length;i++){
@@ -372,13 +368,10 @@ const sendDate = function (param) {
 
                     if (data.length>1) {
                         document.querySelector('.calendar2-msg').innerHTML='Il y a : '+data.length+' événements à cette date';
-
                     }
                     else{
                         document.querySelector('.calendar2-msg').innerHTML='Il y a : '+data.length+' événement à cette date';
-
                     }
-
                 }
             }
 
@@ -397,13 +390,15 @@ let year = dateObj.getUTCFullYear();
 
 let newdate = year + "/" + month + "/" + day;
 
-
 console.log(newdate)
-
 
 let dateFrench = new Date(Date.UTC(year, month-1, day, 3, 0, 0));
 
- options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+ options = { weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+            };
 
 
 console.log(dateFrench.toLocaleDateString('fr-FR', options));
@@ -415,69 +410,11 @@ console.log(dateFrenchDay)
 document.querySelector('.dateSelected').innerHTML=dateFrenchDay;
 
 
-
-
 let objDateDay = new FormData()
 
 objDateDay.append('date', newdate)
 
 window.onload = sendDate(objDateDay)
-
-// const sendId = function (elem) {
-//
-//     fetch('./oneEvent.php', {
-//         method: 'POST',
-//         headers: new Headers(),
-//         body: elem
-//     })
-//
-//         .then((res) => res.json())
-//
-//         .then((data) => {
-//             console.log(data)
-//
-//             if (data.medias_image) {
-//
-//                 console.log(data.medias_image)
-//                 let medias = data.medias_image.split(',')
-//                 console.log(medias)
-//                 for (let i = 0; i<medias.length; i++){
-//
-//                     if (medias[i].indexOf('iframe') == 1) {
-//                         console.log(medias[i])
-//                         let video = document.createElement('span')
-//                         document.querySelector('.forMedias').appendChild(video)
-//                         video.innerHTML = (medias[i])
-//                     }
-//                     else{
-//                         let img = document.createElement('img')
-//                         img.setAttribute('src','./assets/image/'+medias[i])
-//                         document.querySelector('.forMedias').appendChild(img)
-//                     }
-//
-//
-//                 }
-//             }
-//
-//
-//
-//             if (data.type === 1){
-//                 alert(data.msg)
-//             }
-//             else{
-//                 let color1 = "#87C5DD"
-//                 displayMap(data['image'],data['title'],data['content'],color1)
-//                 let adress = data['streetNumber']+" "+data["street"]+" "+data['zipcode']+" "+data['city']
-//                 initMap(parseFloat(data['lattitude']),parseFloat(data['longitude']),data['title'],adress)
-//             }
-//
-//
-//         })
-//
-//         .catch((data) => {
-//             alert("un incident s'est produit oneEvent")
-//         })
-// }
 
 
 let container = document.querySelector('#calendar2')
@@ -506,17 +443,12 @@ window.addEventListener('scroll', function () {
 let isScrolling;
 
 window.addEventListener('scroll', function () {
-
-    // Clear our timeout throughout the scroll
     window.clearTimeout( isScrolling );
     console.log("ca scroll")
     input2.classList.add('blueClass')
 
-
-    // Set a timeout to run after scrolling ends
     isScrolling = setTimeout(function() {
 
-        // Run the callback
         console.log( 'Scrolling has stopped.' );
         input2.classList.remove('blueClass')
     }, 220);
@@ -572,7 +504,6 @@ byDate.addEventListener('click', function () {
 let seeEv = document.querySelectorAll('.seeEvents')
 
 
-
 seeEv.forEach(function (see) {
     see.addEventListener('click', function () {
         console.log(this)
@@ -616,18 +547,12 @@ let input = document.querySelector('#search')
 
 let table = []
 
-// input.focus()
 
 input.addEventListener('focus', function () {
   console.log(document.getElementById('namesTable'))
     document.getElementById('namesTable').style.display = 'block'
 })
 
-
-// input.addEventListener('blur', function () {
-//     document.getElementById('namesTable').style.display = 'none'
-//
-// })
 
 
 fetch('./events-search.php', {
@@ -658,7 +583,6 @@ const createPokedex = function (param) {
     for (let i = 0; i < param.length; i++) {
 
         let line = document.createElement('li')
-
         line.setAttribute('id', param[i].id)
         let lineImg = document.createElement('img')
         lineImg.setAttribute('src', "./assets/image/" + param[i].image)
@@ -670,17 +594,12 @@ const createPokedex = function (param) {
 
         line.addEventListener('click', function () {
             console.log(this.getAttribute('id'))
-
             let dataForEvent = new FormData()
-
             dataForEvent.append('id', this.getAttribute('id') )
-
             sendId(dataForEvent)
         })
-
     }
     return tableau
-
 }
 
 
@@ -700,10 +619,6 @@ const findPokemon = function (recherche, table) {
         console.log(pokemon.title.match(regex))
     })
 }
-
-
-
-
 
 
 input.addEventListener('keyup', function (e) {

@@ -12,11 +12,11 @@
         <article>9h - 12h -- 14h - 17h</article>
     </div>
     <div class="adress">
-        <a href="index.php?page=index">Informations</a>
+        <a href="index.php?page=informations">Informations</a>
         <a href="index.php?page=events">Événements</a>
         <a href="index.php?page=contact">Contact</a>
         <a href="index.php?page=connect">Mon compte</a>
-        <a href="">Mentions légales</a>
+        <a href="index.php?page=mentions">Mentions légales</a>
         <a href="index.php?page=faq">F.A.Q</a>
 
     </div>

@@ -45,6 +45,9 @@ if (isset($_GET['page'])) {
             require ('./controllers/connect.php');
             break;
 
+        case'mentions':
+            require ('./controllers/mentions.php');
+            break;
 
         case'faq':
             require ('./controllers/faq.php');

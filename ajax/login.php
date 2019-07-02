@@ -1,5 +1,5 @@
 <?php
-require_once ('assets/toolsDb.php');
+require_once('assets/toolsDb.php');
 
 
 $mail = $_POST['mail'];
@@ -53,8 +53,6 @@ else{
         $_SESSION['user']['street'] = $user['street'];
         $_SESSION['user']['zipcode'] = $user['zipcode'];
         $_SESSION['user']['city'] = $user['city'];
-
-
 
 
         $response -> type = 1;

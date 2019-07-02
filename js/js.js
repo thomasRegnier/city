@@ -1,60 +1,7 @@
 
-
-
-
-    let open = document.querySelector('#open')
-    let close = document.querySelector('#close')
-    let shadow = document.querySelector('.shadow')
-    let menu = document.querySelector('.menu')
     let menuLinks = document.querySelectorAll('.menuDiv')
 
     const url = "http://localhost:8888/projet-city/"
-
-    console.log(url)
-
-    // open.addEventListener('click', function () {
-    //     openMenu()
-    //     mooveDiv()
-    //
-    // })
-    //
-    // close.addEventListener('click', function () {
-    //     closeMenu()
-    //     hideDiv()
-    //
-    // })
-
-
-    if (shadow) {
-        shadow.addEventListener('click', function () {
-            closeMenu()
-            hideDiv()
-
-        })
-    }
-
-
-
-    const openMenu = function () {
-        open.classList.add('masq')
-        close.classList.remove('masq')
-        shadow.classList.remove('masq')
-        shadow.classList.remove('fadeOut')
-        shadow.classList.add('fadeIn')
-        menu.classList.remove('closing')
-        menu.classList.add('opening')
-    }
-
-
-    const closeMenu = function () {
-        open.classList.remove('masq')
-        close.classList.add('masq')
-        shadow.classList.add('fadeOut')
-        shadow.classList.add('masq')
-        menu.classList.remove('opening')
-        menu.classList.add('closing')
-
-    }
 
 
 
@@ -63,26 +10,17 @@
         for (let j = 0; j<menuLinks.length; j++){
             setTimeout(function () {
                 menuLinks[j].classList.add('linkMoove')
-                console.log(j)
             }, j * 200)
         }
     }
 
-
     const hideDiv = function () {
         for (let i = 0; i<menuLinks.length; i++) {
             menuLinks[i].classList.remove('linkMoove')
-            console.log(menuLinks[i])
-
         }
     }
 
-
-
     let history = document.querySelector('#moreHistory')
-
-
-
 
     if (history) {
         history.addEventListener('click', function () {
@@ -156,14 +94,9 @@
     seeOnMap.forEach(function (seeMap) {
 
         seeMap.addEventListener('click', function () {
-            console.log(this)
-            console.log(this.getAttribute('id'))
             let idForMap = this.getAttribute('id')
-
-            console.log(typeof idForMap)
             parseInt(idForMap)
             idForMap = parseInt(idForMap)
-            console.log(typeof idForMap)
             let dataForMap = new FormData()
 
             if (isNaN(idForMap)) {
@@ -182,8 +115,6 @@
                 .then((res) => res.json())
 
                 .then((data) => {
-                    console.log(data)
-
                     if (data.type === 1){
                         alert(data.msg)
                     }
@@ -277,8 +208,6 @@
     }
 
 
-
-
     const hideMap = function () {
         document.querySelector('.modal').classList.remove('actionModal')
         insideMap.classList.remove('insideShow')
@@ -288,37 +217,6 @@
 
     }
 
-
-     validMail = function(elem, blala, msg, star){
-        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(elem.value)) {
-            msg.innerHTML =""
-            star.innerHTML = "<i style='margin-left: 5px' class=\"fas fa-check\"></i>"
-            star.style.color = "green"
-        }
-        else{
-            msg.innerText = blala
-            star.innerText = " * "
-            star.style.color = "red"
-            msg.style.color = "red"
-        }
-
-    }
-
-
-     isEmpty = function (elem, blala, msg, star){
-        if (elem.value.length === 0){
-            msg.innerText = blabla
-            star.innerText = " * "
-            msg.style.color = "red"
-            star.style.color = "red"
-        }
-        else{
-            msg.innerHTML =""
-            star.innerHTML = ""
-        }
-    }
-
-//})
 
 
 
@@ -384,7 +282,6 @@ const test = function (el){
 
     }
 
-    console.log(error)
 
     return error
 
@@ -393,7 +290,6 @@ const test = function (el){
 let ham = document.querySelector('.ham')
 
 
-console.log(ham)
 
 
     ham.addEventListener('click',function () {
@@ -403,7 +299,6 @@ console.log(ham)
     document.querySelector('.newShadow').addEventListener('click', function () {
         showMyMenu()
         ham.classList.remove('active')
-
     })
 
 
@@ -442,17 +337,14 @@ console.log(ham)
             .then((res) => res.json())
 
             .then((data) => {
-                console.log(data)
 
                 if (data.medias_image) {
 
                     console.log(data.medias_image)
                     let medias = data.medias_image.split(',')
-                    console.log(medias)
                     for (let i = 0; i<medias.length; i++){
 
                         if (medias[i].indexOf('iframe') == 1) {
-                            console.log(medias[i])
                             let video = document.createElement('span')
                             document.querySelector('.forMedias').appendChild(video)
                             video.innerHTML = (medias[i])
@@ -478,3 +370,15 @@ console.log(ham)
                 alert("un incident s'est produit oneEvent")
             })
     }
+
+    window.onscroll = function() {myFunction()};
+
+    function myFunction() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+    }
+
+
+

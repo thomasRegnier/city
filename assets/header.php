@@ -22,6 +22,9 @@
 
 </style>
 <body>
+<div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+</div>
 
 <header>
     <a href="index.php?page=index"><img src="./assets/image/logo.jpg"></a>
@@ -71,7 +74,7 @@
 </div>
 
 <div class="newMenu">
-    <div class="homeR menuDiv"><a class="menuLinks" href="index.php?page=index"><i class="fas fa-home"></i> Acceuil</a></div>
+    <div class="homeR menuDiv"><a class="menuLinks" href="index.php?page=index"><i class="fas fa-home"></i> Accueil</a></div>
     <div class="infoR menuDiv"><a class="menuLinks" href="index.php?page=informations"><i class="fas fa-city"></i>  Informations</a></div>
     <div class="eventR menuDiv">  <a class="menuLinks" href="index.php?page=events"><i class="fas fa-calendar-alt"></i> Événements</a></div>
     <div class="contactR menuDiv"><a class="menuLinks" href="index.php?page=contact"> <i class="fas fa-comments"></i> Contact</a></div>
@@ -86,7 +89,7 @@
 </div>
 
 <div class="menu">
-    <div class="homeR menuDiv"><a class="menuLinks" href="index.php?page=index"><i class="fas fa-home"></i> Acceuil</a></div>
+    <div class="homeR menuDiv"><a class="menuLinks" href="index.php?page=index"><i class="fas fa-home"></i> Accueil</a></div>
     <div class="infoR menuDiv"><a class="menuLinks" href="index.php?page=informations"><i class="fas fa-city"></i>  Informations</a></div>
     <div class="eventR menuDiv">  <a class="menuLinks" href="index.php?page=events"><i class="fas fa-calendar-alt"></i> Événements</a></div>
     <div class="contactR menuDiv"><a class="menuLinks" href="index.php?page=contact"> <i class="fas fa-comments"></i> Contact</a></div>
@@ -108,3 +111,4 @@
         !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
     </script>
 </div>
+

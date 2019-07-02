@@ -84,6 +84,7 @@
                 <img src="./assets/image/<?php echo $event['image']; ?>">
                 <h4><?php echo $event['title']; ?></h4>
                 <div class="insideEventContent"><?php echo $event['description']; ?></div>
+                <div class="eventDate"><?php  echo $event['event_date'];?></div>
                 <div class="forSeeEvents">
                     <span class="seeEvents" eventid="<?php echo $event['id']; ?>">Voir plus</span>
                 </div>

@@ -127,22 +127,6 @@ finalOk.addEventListener('click', function () {
         recupMess()
     }
 })
-//
-// let mailM = document.querySelector('#mailMess')
-// mailM.addEventListener('blur', function () {
-//     isEmpty(mailM, blabla = " Un mail est obligatoire", document.querySelector('.mailMsg'), document.querySelector('.starM'))
-//
-//     if (mailM.value.length > 0) {
-//         validMail(mailM, blabla = "Adresse mail invalide", document.querySelector('.mailMsg'), document.querySelector('.starM'))
-//     }
-// })
-//
-// let contentMsg = document.querySelector('#messageSignal')
-// contentMsg.addEventListener('blur', function () {
-//     isEmpty(contentMsg, blabla = " Un message est obligatoire", document.querySelector('.desMsg'), document.querySelector('.starD'))
-//
-// })
-
 
 
 let sectorForm = document.querySelectorAll('.finalSignal input')
@@ -168,24 +152,6 @@ const recupMess = function () {
     let mailMess = document.querySelector('#mailMess').value
     let messageSignal = document.querySelector('#messageSignal').value
 
-
-   // isEmpty(mailM, blabla = " Un mail est obligatoire", document.querySelector('.mailMsg'),document.querySelector('.starM'))
-
-    // if (mailM.value.length>0) {
-    //     validMail(mailM, blabla = "Adresse mail invalide", document.querySelector('.mailMsg'), document.querySelector('.starM'))
-    // }
-    //
-    // isEmpty(contentMsg, blabla = " Un message est obligatoire", document.querySelector('.desMsg'),document.querySelector('.starD'))
-    //
-    // if (contentMsg.value.length === 0 || mailM.value.length === 0){
-    //     disNoneandBlock(document.querySelector('.tabs-content'),document.querySelector('.loader'),)
-    //     return
-    // }
-    //
-    // if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mailM.value))){
-    //     disNoneandBlock(document.querySelector('.tabs-content'),document.querySelector('.loader'),)
-    //     return
-    // }
 
     console.log(choice)
     console.log(mailMess)
@@ -307,9 +273,6 @@ testInput.forEach(function (input) {
 
 
 
-
-
-
 document.querySelector('#validInfoMsg').addEventListener('click', function () {
 
     error =[]
@@ -331,48 +294,3 @@ document.querySelector('#validInfoMsg').addEventListener('click', function () {
     }
 })
 
-//
-// let array = document.querySelectorAll(".secondForm input")
-//
-//
-// console.log(array)
-// console.log(document.querySelector('.secondForm textarea'))
-//
-// array = Array.prototype.slice.call(array)
-//
-// array.push(document.querySelector('.secondForm textarea'))
-//
-// console.log(array)
-//
-//
-// document.querySelector('#validInfoMsg').addEventListener('click', function () {
-//     console.log(testF(array))
-//     sendingMessage(testF(array))
-// })
-//
-//
-// const sendingMessage = function (obj){
-//
-//     fetch('http://localhost:8888/projet-city/message-tools.php', {
-//         method: 'POST',
-//         headers: new Headers(),
-//         body: JSON.stringify(obj)
-//     })
-//
-//         .then((res) => res.json())
-//
-//         .then((data) => {
-//
-//             console.log(data)
-//             disNoneandBlock(document.querySelector('.tabs-content'),document.querySelector('.loader'),)
-//
-//             notif(alertMessage,data.type,data.msg)
-//
-//             alertMessage.addEventListener("animationend", function () {
-//                 removeMsg(alertMessage, data.type)
-//             })
-//         })
-//         .catch((data) => {
-//             alert("un incident s'est produit")
-//         })
-// }

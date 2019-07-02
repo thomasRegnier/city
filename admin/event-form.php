@@ -170,7 +170,7 @@ if (isset($_POST['save']) OR isset($_POST['update'])) {
 
                         $nameImg = $new_file_name . '.' . $my_file_extension;
 
-                        $destination = '/Applications/MAMP/htdocs/projet-city/assets/image/' . $new_file_name . '.' . $my_file_extension;
+                        $destination = '../assets/image/' . $new_file_name . '.' . $my_file_extension;
 
                     } while (file_exists($destination));
 
@@ -237,7 +237,7 @@ if (isset($_POST['save']) OR isset($_POST['update'])) {
 
                     $nameImg = $new_file_name . '.' . $my_file_extension;
 
-                    $destination = '/Applications/MAMP/htdocs/projet-city/assets/image/' . $new_file_name . '.' . $my_file_extension;
+                    $destination = '../assets/image/' . $new_file_name . '.' . $my_file_extension;
 
                 } while (file_exists($destination));
 
@@ -333,7 +333,7 @@ if(isset($_POST['add_image'])) {
 
                     $nameImg = $new_file_name . '.' . $my_file_extension;
 
-                    $destination = '/Applications/MAMP/htdocs/projet-city/assets/image/' . $new_file_name . '.' . $my_file_extension;
+                    $destination = '../assets/image/' . $new_file_name . '.' . $my_file_extension;
 
                 } while (file_exists($destination));
 

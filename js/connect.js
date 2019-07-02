@@ -31,7 +31,6 @@ if (document.querySelector('#validConnect')) {
             test(input)
         })
 
-
         if (error.length > 0) {
             console.log("c est mort")
 
@@ -90,12 +89,14 @@ if (document.querySelector('#validConnect')) {
                                 document.querySelector('nav').appendChild(forDisco)
                                 document.querySelector('.nextConnect').style.display = "flex"
                                 disNoneandBlock(document.querySelector('.forDiscoAjax'),document.querySelector('.connectForm'))
+
                                 let nameSession = document.querySelector('.nameSession')
                                 nameSession.innerText = data.user.name+" "+data.user.firstname
                                 console.log(data.user.is_update)
                                 let adressUser = data.user.streetNumber+" "+data.user.street+" "+data.user.zipcode+" "+data.user.city
                                 displayInfo(data.user.name, data.user.firstname,adressUser,data.user.mail,data.user.is_update,data.user.phone)
                                 if (data.bills) {
+
                                     if (document.body.clientWidth <= '800') {
 
                                         let newItem = document.createElement('section')

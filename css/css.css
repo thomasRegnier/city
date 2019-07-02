@@ -4,12 +4,10 @@ body{
     overflow-x: hidden;
 }
 
-
 header{
     display: flex;
     align-items:  center;
     justify-content: space-between;
-
 }
 
 
@@ -58,8 +56,6 @@ nav a:hover{
     transition: 0.2s ease-in;
 
 }
-
-
 #event , .eventR{
     background-color: #87C5DD;
     transition: 0.2s ease-in;
@@ -88,7 +84,6 @@ nav a:hover{
     background-size: cover;
     -webkit-background-size: cover;
     /*background-attachment: fixed;*/
-
 }
 
 
@@ -97,7 +92,6 @@ h1{
 }
 
 footer{
-
     padding-top: 40px;
     padding-bottom: 40px;
     background-color: #2E2E2D;
@@ -118,7 +112,6 @@ footer .lineWhite{
     width: 50px;
     height: 5px;
     background-color: white;
-
 }
 
 .adress{
@@ -139,9 +132,7 @@ footer .lineWhite{
 }
 
 .divLogo img {
-
     margin-right: 10px;
-
 }
 
 .imgUp .forTitleUp{
@@ -167,23 +158,18 @@ footer .lineWhite{
 
 .pageHomeEvent{
     background-color: #87C5DD ;
-
 }
-
 
 .pageHomeContact{
     background-color: #B2BB13 ;
-
 }
 
 .pageHomeFaq{
     background-color: #33809F;
-
 }
 
 .pageHomeConnect{
     background-color: #D85600;
-
 }
 
 
@@ -252,12 +238,10 @@ h1{
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
     object-fit: cover;
-
 }
 
 
 .insideInfos{
-
     margin-top: 25px;
     border: 1px solid #e1e8ed;
     border-radius: 6px ;
@@ -265,13 +249,11 @@ h1{
     box-shadow: 2px 2px 2px whitesmoke;
     background-color: #fafafa;
     transition: ease-in-out 0.3s;
-
 }
 
 .insideInfos:hover{
     transform: scale(1.01);
     box-shadow: 4px 4px 4px #ededed;
-
 }
 
 .insideInfos div{
@@ -305,9 +287,6 @@ h1{
 .forSeeMap span:hover{
     background-color: #41a4cc;
 }
-
-
-
 
 .forStory{
     padding: 30px 0px 30px 0px;
@@ -384,8 +363,6 @@ h1{
     align-content: center;
     align-items: center;
     justify-items: center;
-/* background: linear-gradient(111deg, rgba(233,233,233,1) 0%, rgba(233,233,233,0.9430147058823529) 100%);*/
-
 }
 
 .imgOnMap{
@@ -607,8 +584,18 @@ button{
 }
 
 .insideEventContent{
-    padding-left: 15px;
     padding-top: 15px;
+    width: 90%;
+    margin: auto;
+}
+
+.eventDate{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 90%;
+    margin: auto;
+    text-align: right;
+    font-style: italic;
 }
 
 .forEvents{
@@ -645,8 +632,6 @@ button{
     padding: 5px 20px 5px 20px;
     border-radius: 5px;
     cursor: pointer;
-
-
 }
 
 .forEvents span:hover{
@@ -1358,6 +1343,7 @@ button{
 
 .firstMsg{
     color: #0057ff;
+    text-align: center;
 }
 
 
@@ -1691,4 +1677,30 @@ background-color: #ececec;
     padding: 5px 10px 5px 10px;
     cursor: pointer;
     border-radius: 5px;
+}
+
+.progress-container {
+    display: none;
+    width: 100%;
+    height: 5px;
+    background: #ffffff;
+    position: fixed;
+    top: 88px;
+    z-index: 9;
+}
+
+.progress-bar {
+    height: 5px;
+    background: rgb(0,144,255);
+    background: linear-gradient(111deg, rgba(0,144,255,0.500437675070028) 0%, rgba(0,144,255,0.500437675070028) 0%);
+    width: 0%;
+}
+
+
+.mentions{
+    width: 90vw;
+    margin: auto;
+}
+.mentions h3{
+    text-decoration: underline;
 }

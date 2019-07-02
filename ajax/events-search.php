@@ -1,6 +1,6 @@
 
 <?php
-require_once ('assets/toolsDb.php');
+require_once('assets/toolsDb.php');
 
 //require_once ('./models/events.php');
 

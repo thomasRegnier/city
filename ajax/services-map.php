@@ -14,7 +14,7 @@
 
 //header("Access-Control-Allow-Origin: *");
 
-require_once ('assets/toolsDb.php');
+require_once('assets/toolsDb.php');
 
 $id = intval($_POST['id']);
 

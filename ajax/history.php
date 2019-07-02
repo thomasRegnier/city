@@ -1,6 +1,6 @@
 <?php
 //connexion à la base de données
-require_once ('assets/toolsDb.php');
+require_once('assets/toolsDb.php');
 
 
 $homeArticles = new \stdClass();

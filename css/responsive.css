@@ -176,14 +176,12 @@
 
     .imgInfos{
         width: 90vw;
+        margin-top: 15px;
         /*height: 250px;*/
         height: auto;
 
     }
 
-    .imgOnMap{
-        display: none;
-    }
 
     .forSeeMap{
         padding-top: 10px;
@@ -348,6 +346,10 @@
         width: 90%;
     }
 
+    .progress-container{
+        display: block;
+    }
+
 }
 
 @media all and (max-width: 600px) {
@@ -357,6 +359,13 @@
         width: 100vw;
     }
 
+    .containUser{
+        width: 70vw;
+    }
+
+    .userInfo{
+        width: 100%;
+    }
     .adress :first-child{
         font-size: 100%;
 
@@ -387,5 +396,8 @@
         width: 90%;
     }
 
+    .forSearch{
+        display: none;
+    }
 
 }
